@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mario World</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <style>
+            #princesa {
+                position: absolute;
+                top: 39vh;
+                left: 86vw;
+                font-size: 5vh;
+            }
+            #controle {
+                text-align: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+            }
+            #controle button {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: red;
+                color: white;
+                text-shadow: 1px 1px black;
+                margin: 0.1rem;
+                border-radius: 0.5rem;
+            }
+            #player {
+                position: absolute;
+                top: 50vh;
+                left: 47.5vw;
+                font-size: 5vh;
+            }
+            h1 {
+                font-size: 50px;
+                text-align: center;
+                font-family: Georgia, serif;
+                text-shadow: 2px 2px black;
+                color: red;
+            }
+            body {
+                background-image: url(https://img.freepik.com/vetores-premium/antigo-fundo-retro-de-videogame-cenario-de-design-de-jogos-de-estilo-retro-classico_41737-812.jpg);
+                background-size: 69%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mario World</h1>
+        <div id="princesa">
+            <img width="160px" height="200px" src="https://i.pinimg.com/originals/20/0e/ab/200eab0ad8f385dcbdffa42217d75daa.png">
+        </div>
+        <div id="player">
+            <img width="200px" height="200px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cfca3f83-9e45-4fa4-a361-574cc7aa62f8/dfrxwfz-e9838fc0-2b12-4f88-94c7-edfd286880df.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmY2EzZjgzLTllNDUtNGZhNC1hMzYxLTU3NGNjN2FhNjJmOFwvZGZyeHdmei1lOTgzOGZjMC0yYjEyLTRmODgtOTRjNy1lZGZkMjg2ODgwZGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5ffcs1-VRzhIasQeEQimumMIwMkDnKVi2TNuXeWjJq0">
+        </div>
+        <div id="controle">
+            <button onclick="cima()">&#9650;</button><br>
+            <button onclick="esquerda()">&#9664;</button>
+            <button onclick="baixo()">&#9660;</button>
+            <button onclick="direita()">&#9654;</button>
+        </div>
+        
+        <script>
+            var player = document.querySelector("#player")
+            var x = 47.5;
+            var y = 50;
+            
+            function cima() {
+                y = y - 5;
+                player.style.top = y+"vh";
+            }
+            function baixo() {
+                y = y + 5;
+                player.style.top = y+"vh";
+            }
+            function esquerda() {
+                x = x - 5;
+                player.style.left = x+"vw";
+            }
+            function direita() {
+                x = x + 5;
+                player.style.left = x+"vw";
+            }
+        </script>
+    </body>
+</html>
